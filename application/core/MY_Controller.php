@@ -8,11 +8,17 @@ class My_Controller extends CI_Controller
     public function __construct() {
         parent::__construct();
         $this->load->helper('tag');
+        $this->load->helper('url');
 
         $this->data = array(
             'view' => $this->default_view,
             'include_nav' => true,
             'include_footer' => true,
+            'php_to_js'     => array(
+                "base_url" => base_url(),
+                "api_url" => $this->config->item('api_url')
+                ),
+            'scripts' => array()
             );
     }
 

@@ -19,10 +19,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 switch (ENVIRONMENT) {
     case 'production':
-        $config['base_url'] = 'http://justinchallenger.ca/home/';
+        $config['base_url'] = '';
+        $config['api_url'] 	= '';
         break;
     default:
         // Auto find base_url
+    	$config['api_url']	= '';
         break;
 }
 
@@ -37,7 +39,7 @@ switch (ENVIRONMENT) {
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------

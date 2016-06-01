@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <?php $this->load->view('_head'); ?>
 </head>
@@ -23,5 +23,6 @@
     <footer id="site-footer">
         <?php if($include_footer) { $this->load->view('_footer'); } ?>
     </footer>
+    <?php $this->load->view('_scripts'); ?>
 </body>
 </html>
