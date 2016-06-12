@@ -1,4 +1,4 @@
-<title>OuiDance | Motto Mojo</title>
+<title>CI Template | Motto Mojo</title>
 
 <!-- Required meta tags always come first -->
 <meta charset="utf-8">
@@ -6,9 +6,8 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
 <?php
-echo script_tag( 'https://code.jquery.com/jquery-1.12.4.min.js');
-
-echo link_tag(   'third_party/tether/css/tether.css');
-echo link_tag(   'third_party/bootstrap/css/bootstrap.css');
-
-echo link_tag(   'css/custom.css');
+if(isset($stylesheets)){
+    foreach ($stylesheets as $sheet) {
+        echo link_tag($sheet);
+    }
+}
