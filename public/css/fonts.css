@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Blippo';
+    src: url('../fonts/Blippo.woff2') format('woff2'),
+        url('../fonts/Blippo.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blippo Blk BT';
+    src: url('../fonts/BlippoBT-Black.woff2') format('woff2'),
+        url('../fonts/BlippoBT-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blippo Blk BT';
+    src: url('../fonts/BlippoBT-Black.woff2') format('woff2'),
+        url('../fonts/BlippoBT-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blippo';
+    src: url('../fonts/Blippo.woff2') format('woff2'),
+        url('../fonts/Blippo.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+

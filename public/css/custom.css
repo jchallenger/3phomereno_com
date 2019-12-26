@@ -1,0 +1,59 @@
+@main-color: #91191C;
+@sec-color: #915219;
+
+html , body {
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Blippo';
+}
+.header-contact-number {
+    font-family: 'Blippo';
+    color: #91191C;
+    font-size: 5vw;
+    margin-top: 1em;
+}
+.header-contact-number a {
+    color: #91191C;
+    -webkit-text-stroke-width: 0.03em;
+    -webkit-text-stroke-color: white;
+    -webkit-text-fill-color: #91191C;
+}
+
+.wrapper{ 
+    min-height: 100%;
+    margin-bottom: -120px;
+}
+.wrapper:after{
+    content: "";
+    display: block;
+}
+.wrapper:after, .footer {
+    height: 120px;
+}
+.footer{
+    background-color: #91191C;
+}
+
+.content{
+    text-align: center;
+}
+.bg{
+    background: url(../img/bgWood.jpg) no-repeat center center fixed;
+
+    z-index:-999;
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.clamp-bottom{
+    margin-bottom: 0px;
+}
+
+.gallery-main img {max-height: 600px !important;}
+.gallery-main-container .bx-wrapper, 
+.gallery-main-container .bx-viewport {
+    min-height: 600px !important;
+}

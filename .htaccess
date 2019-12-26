@@ -1,12 +1,12 @@
-<IfModule mod_rewrite.c>
-RewriteEngine On
+# Use the front controller as index file. It serves as a fallback solution when
+# every other rewrite/redirect fails (e.g. in an aliased environment without
+# mod_rewrite). Additionally, this reduces the matching process for the
+# start page (path "/") because otherwise Apache will apply the rewriting rules
+# to each configured DirectoryIndex file (e.g. index.php, index.html, index.pl).
+DirectoryIndex app.php index.html
 
-#Checks to see if the user is attempting to access a valid file,
-#such as an image or css document, if this isn't true it sends the
-#request to index.php
+Options -MultiViews
+RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-#This last condition enables access to the images and css folders, and the robots.txt file
-RewriteCond $1 !^(index\.php|public|images|robots\.txt|css)
-RewriteRule ^(.*)$ index.php/$1 [L]
-</IfModule>
+RewriteRule ^ app.php [QSA,L]
+ErrorDocument 404 /?page=lost
